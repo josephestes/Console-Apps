@@ -2,3 +2,35 @@
 	path = AddNumbers
 	url = https://github.com/josephestes/AddNumbers
 	branch = master
+[submodule "Admission"]
+	path = Admission
+	url = https://github.com/josephestes/Admission
+	branch = master
+[submodule "AdmissionImproved"]
+	path = AdmissionImproved
+	url = https://github.com/josephestes/AdmissionImproved
+	branch = master
+[submodule "ArrayDemo"]
+	path = ArrayDemo
+	url = https://github.com/josephestes/ArrayDemo
+	branch = master
+[submodule "CalculateMPG"]
+	path = CalculateMPG
+	url = https://github.com/josephestes/CalculateMPG
+	branch = master
+[submodule "EstimatePaintCost"]
+	path = EstimatePaintCost
+	url = https://github.com/josephestes/EstimatePaintCost
+	branch = master
+[submodule "FileProcessing"]
+	path = FileProcessing
+	url = https://github.com/josephestes/FileProcessing
+	branch = master
+[submodule "MultiplicationTable"]
+	path = MultiplicationTable
+	url = https://github.com/josephestes/MultiplicationTable
+	branch = master
+[submodule "SortWords"]
+	path = SortWords
+	url = https://github.com/josephestes/SortWords
+	branch = master
