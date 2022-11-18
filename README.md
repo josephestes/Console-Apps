@@ -1,4 +1,4 @@
-# Console-App-Practice
+# Console-Apps
 
 
 The purpose of these programs are to demonstrate fundamental programming concepts using the C# programming language. Concepts include data types, control structures, simple data structures, error-handling, object-oriented programming, graphical user interfaces, and modular programming.
