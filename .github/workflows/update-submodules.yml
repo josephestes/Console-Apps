@@ -16,7 +16,7 @@ jobs:
       - name: Push updated submodules to main repository
         uses: actions/github-script@v3
         with:
-          github_token: ${{ secrets.GH_ACTIONS_TOKEN }}
+          github-token: ${{ secrets.GH_ACTIONS_TOKEN }}
           script: |
             git config user.email "actions@github.com"
             git config user.name "GitHub Actions"
