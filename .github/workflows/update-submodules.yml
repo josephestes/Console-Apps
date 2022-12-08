@@ -3,25 +3,17 @@ name: Update Submodules
 on:
   push:
     paths:
-      - '**/*'
-    branches:
-      - '*/master'
+      - '**'
 
 jobs:
-  update-submodules:
+  update_submodules:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      # Initialize the submodules in the repository
-      - run: git submodule init
-
-      # Update the submodules to their latest commit
-      - run: git submodule update
-
-      # Commit the changes to the repository
-      - run: |
-          git config --global user.email "github-actions@example.com"
-          git config --global user.name "GitHub Actions"
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+          git submodule foreach git pull origin master
           git add .
-          git commit -m "Updated submodules"
+          git commit -m "Updating submodules"
+          git push origin master
