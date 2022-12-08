@@ -4,20 +4,24 @@ on:
   push:
     paths:
       - '**/*'
+    branches:
+      - '*/master'
 
 jobs:
   update-submodules:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Update Submodules
-        run: |
-          git submodule update --init --recursive
-      - name: Push updated submodules to main repository
-        uses: actions/github-script@v3
-        with:
-          github-token: ${{ secrets.GH_ACTIONS_TOKEN }}
-          script: |
-            git config user.email "actions@github.com"
-            git config user.name "GitHub Actions"
-            git push origin HEAD:${{ github.ref }}
+      - uses: actions/checkout@v2
+
+      # Initialize the submodules in the repository
+      - run: git submodule init
+
+      # Update the submodules to their latest commit
+      - run: git submodule update
+
+      # Commit the changes to the repository
+      - run: |
+          git config --global user.email "github-actions@example.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "Updated submodules"
