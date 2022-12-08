@@ -15,11 +15,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Update submodules
         run: |
-          # Check if the submodule has been updated
-          if ! git diff --quiet HEAD -- submodule_directory || true; then
-            # Update the submodule
-            git submodule update --init --recursive
-          fi
+          # Update the submodule
+          git submodule update --init --recursive
           # Pull changes from the origin master branch
           git pull origin master
       - name: Push changes
@@ -27,5 +24,5 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add .
-          git commit -m "Update submodules"
-          git push origin main
+          git commit -m "Update submodules" || echo "No changes to commit"
+          git push origin main || echo "No changes to push"
