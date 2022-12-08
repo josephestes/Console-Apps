@@ -14,6 +14,8 @@ jobs:
         run: |
           git submodule update --init --recursive
           git submodule foreach git pull origin master
+          git config --global user.email "github-actions@example.com"
+          git config --global user.name "GitHub Actions"
           git add .
           git commit -m "Updating submodules"
           git push origin master
