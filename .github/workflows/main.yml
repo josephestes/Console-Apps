@@ -3,7 +3,15 @@ name: Update Submodules
 on:
   push:
     branches:
-      - master
+      - 'AddNumbers/master'
+      - 'Admission/master'
+      - 'AdmissionImproved/master'
+      - 'ArrayDemo/master'
+      - 'CalculateMPG/master'
+      - 'EstimatePaintCost/master'
+      - 'FileProcessing/master'
+      - 'MultiplicationTable/master'
+      - 'SortWords/master'
 
 jobs:
   update-submodules:
