@@ -1,6 +1,8 @@
 name: Update submodules
 
 on:
+  schedule:
+    - cron: "0 0 * * *" # run every day at midnight
   push:
     paths:
       - '*/**'
