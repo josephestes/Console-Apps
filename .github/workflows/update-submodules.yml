@@ -32,9 +32,12 @@ jobs:
               cd ..
             fi
           done
-          # Push changes to the main repository
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add .
-          git commit -m "Update submodules"
-          git push origin main
+          # Check if there are any changes to commit
+          if ! git diff-index --quiet HEAD --; then
+            # Push changes to the main repository
+            git config --global user.email "action@github.com"
+            git config --global user.name "GitHub Action"
+            git add .
+            git commit -m "Update submodules"
+            git push origin main
+          fi
