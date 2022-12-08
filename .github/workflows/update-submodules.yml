@@ -13,8 +13,13 @@ jobs:
       - uses: actions/checkout@v2
       - name: Update submodules
         run: |
-          git submodule update --init --recursive
-          git submodule foreach git pull origin master
+          # Check if the submodule has been updated
+          if ! git diff --quiet HEAD -- submodule_directory; then
+            # Update the submodule
+            git submodule update --init --recursive
+          fi
+          # Pull changes from the origin master branch
+          git pull origin master
       - name: Push changes
         run: |
           git config --global user.email "action@github.com"
