@@ -16,3 +16,15 @@ The goals of this project are to:
 10. Design event-driven programs with a graphical user interface (GUI).
 11. Use object-oriented programming features in program design.
 12. Evaluate and critique the effectiveness and efficiency of code.
+
+# Contents
+
+This project includes the following programs:
+
+- Calculator
+- Basic File Processing
+- Tic-Tac-Toe
+- Temperature Converter
+- Shape Classifier
+
+Each program includes a detailed readme file with instructions on how to run the program and a brief description of the program's functionality.
